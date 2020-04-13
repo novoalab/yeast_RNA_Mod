@@ -1,14 +1,9 @@
-# YEAST RIBOSOMAL RNA MODIFICATION ANALYSIS
-Analysis of Direct RNA Sequencing of Yeast Ribosomal RNA 
-These scripts are used for the generation of results in the study below:
-"Decoding ribosomal RNA modifications in translating and non-translating ribosomes at single molecule resolution"
+# Yeast Ribosomal RNA 
+
+## Nanopore Sequencing Runs
 
 
-## DATASETS
-
-### WT and Pseudouridylation KO Dataset
-
-Run ID : RNA814001
+### Run ID : RNA814001
 
 |Barcodes| Strain        | Source           | Modification  | KO Positions |
 |----| ------------- |:-------------:| -----:| -------: |
@@ -17,9 +12,7 @@ Run ID : RNA814001
 |BC3|    snR36  | Weizmann | Pseudouridylation | SSU: 1187 |
 |BC4|   BY4741  | Weizmann/CRG | NA | NA |
 
-### Normal Condition Sucrose Gradient Fractions Datasets
-
-Run ID :  RNA442567, RNA92741
+### Run ID :  RNA442567, RNA92741
 
 |Barcodes| Strain        | Condition           | rRNA population | Fraction number |
 |----| ------------- |:-------------:| -----:| -------: |
@@ -28,9 +21,7 @@ Run ID :  RNA442567, RNA92741
 |BC3|    BY4741  | Normal | Lowly translating | 7,8,9,10 |
 |BC4|   BY4741  | Normal | Highly translating | 12,13,14,15,16,17 |
 
-### Normal and Stress (H2O2) Conditions Sucrose Gradient Fractions Datasets
-
-Run ID :  RNA639991, RNA563572
+### Run ID :  RNA639991, RNA563572
 
 |Barcodes| Strain        | Condition           | rRNA population | Fraction number |
 |----| ------------- |:------------:| -----:| -------: |
@@ -44,3 +35,4 @@ Run ID :  RNA639991, RNA563572
 [Information on the fractions can be found here](https://github.com/obegik/Oz_Mod_Analysis/blob/master/yeast_rRNA_fractions.md)
 
 
+[Information on the run stats can be found here](https://docs.google.com/spreadsheets/d/146LgFh8WyF4oEJgJTTWS9hCU6F6-7Ygn9rjFr0bmuuE/edit?usp=sharing)
