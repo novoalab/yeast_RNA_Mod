@@ -41,6 +41,6 @@ Run ID :  RNA639991, RNA563572
 
 
 
-[Information on the fractions can be found here](https://github.com/obegik/Oz_Mod_Analysis/blob/master/yeast_rRNA_fractions.md)
+[Information on the fractions can be found here](https://github.com/novoalab/yeast_rRNA_Mod/blob/master/scripts/yeast_rRNA_fractions.md)
 
 
