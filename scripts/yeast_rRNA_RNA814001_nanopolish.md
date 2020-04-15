@@ -1,126 +1,46 @@
 # Yeast Ribosomal RNA 
 
 ## Nanopolish Analysis of RNA814001 Run (Pseudouridylation KO strains)
+### Analysis for the Nanopolish Output
 
-### Processing using Nanopolish Tool
+We will use the Nanopolish raw output to produce three types of files
 
-### Pre-processing the Nanopolish Output (Event Align) for per-read/pos 
+  * Per position : Calculated Mean values per position
+  * Per position-15nt window : Calculated mean values per 15 nt window
+  * Per read-15nt window : Calculated per-read values per 15 nt window (For Stoichometry)
 
-#### Process the raw eventalign output in order to clean it a bit (Take mean of the multiple observations per-read/pos)
+#### Creating per-position values
+required: python3
 ```bash
 #Load the module of Python
 module load Python/3.7.2-GCCcore-8.2.0
 ```
 
-```Python
-import pandas as pd
-
-bc1=pd.read_csv("bc1.reads-ref.eventalign.txt",sep='\t')
-bc2=pd.read_csv("bc2.reads-ref.eventalign.txt",sep='\t')
-bc3=pd.read_csv("bc3.reads-ref.eventalign.txt",sep='\t')
-bc4=pd.read_csv("bc4.reads-ref.eventalign.txt",sep='\t')
-
-#For the simple figure of (per mean/read-pos) 
-grouped_multiple_mean_bc1 = bc1.groupby(['contig', 'position','reference_kmer','read_index']).agg({'event_level_mean':['mean']})
-grouped_multiple_mean_bc1 = grouped_multiple_mean_bc1.reset_index()
-grouped_multiple_mean_bc1.columns =  grouped_multiple_mean_bc1.columns.droplevel(-1)
-grouped_multiple_mean_bc1.to_csv(r'bc1_processed_perread_mean.tsv', sep='\t', index = False)
-
-grouped_multiple_mean_bc2 = bc2.groupby(['contig', 'position','reference_kmer','read_index']).agg({'event_level_mean':['mean']})
-grouped_multiple_mean_bc2 = grouped_multiple_mean_bc2.reset_index()
-grouped_multiple_mean_bc2.columns =  grouped_multiple_mean_bc2.columns.droplevel(-1)
-grouped_multiple_mean_bc2.to_csv(r'bc2_processed_perread_mean.tsv', sep='\t', index = False)
-
-grouped_multiple_mean_bc3 = bc3.groupby(['contig', 'position','reference_kmer','read_index']).agg({'event_level_mean':['mean']})
-grouped_multiple_mean_bc3 = grouped_multiple_mean_bc3.reset_index()
-grouped_multiple_mean_bc3.columns =  grouped_multiple_mean_bc3.columns.droplevel(-1)
-grouped_multiple_mean_bc3.to_csv(r'bc3_processed_perread_mean.tsv', sep='\t', index = False)
-
-grouped_multiple_mean_bc4 = bc4.groupby(['contig', 'position','reference_kmer','read_index']).agg({'event_level_mean':['mean']})
-grouped_multiple_mean_bc4 = grouped_multiple_mean_bc4.reset_index()
-grouped_multiple_mean_bc4.columns =  grouped_multiple_mean_bc4.columns.droplevel(-1)
-grouped_multiple_mean_bc4.to_csv(r'bc4_processed_perread_mean.tsv', sep='\t', index = False)
+```bash
+python3 perpos.py input
+#example input x.reads-ref.eventalign.txt
 ```
 
-#### Process the raw eventalign output in order to collapse all the reads per position
+#### Creating per-15nt values
+required: python3
 
 ```bash
-#Load the module of Python
-module load Python/3.7.2-GCCcore-8.2.0
-```
-```Python
-import pandas as pd
-
-bc1=pd.read_csv("bc1.reads-ref.eventalign.txt",sep='\t')
-bc2=pd.read_csv("bc2.reads-ref.eventalign.txt",sep='\t')
-bc3=pd.read_csv("bc3.reads-ref.eventalign.txt",sep='\t')
-bc4=pd.read_csv("bc4.reads-ref.eventalign.txt",sep='\t')
-
-#For the simple figure of (per median/position) 
-grouped_multiple_mean_bc1 = bc1.groupby(['contig', 'position','reference_kmer']).agg({'event_level_mean':['mean']})
-grouped_multiple_mean_bc1 = grouped_multiple_mean_bc1.reset_index()
-grouped_multiple_mean_bc1.columns =  grouped_multiple_mean_bc1.columns.droplevel(-1)
-grouped_multiple_mean_bc1.to_csv(r'bc1_processed_perpos_mean.tsv', sep='\t', index = False)
-
-grouped_multiple_mean_bc2 = bc2.groupby(['contig', 'position','reference_kmer']).agg({'event_level_mean':['mean']})
-grouped_multiple_mean_bc2 = grouped_multiple_mean_bc2.reset_index()
-grouped_multiple_mean_bc2.columns =  grouped_multiple_mean_bc2.columns.droplevel(-1)
-grouped_multiple_mean_bc2.to_csv(r'bc2_processed_perpos_mean.tsv', sep='\t', index = False)
-
-grouped_multiple_mean_bc3 = bc3.groupby(['contig', 'position','reference_kmer']).agg({'event_level_mean':['mean']})
-grouped_multiple_mean_bc3 = grouped_multiple_mean_bc3.reset_index()
-grouped_multiple_mean_bc3.columns =  grouped_multiple_mean_bc3.columns.droplevel(-1)
-grouped_multiple_mean_bc3.to_csv(r'bc3_processed_perpos_mean.tsv', sep='\t', index = False)
-
-grouped_multiple_mean_bc4 = bc4.groupby(['contig', 'position','reference_kmer']).agg({'event_level_mean':['mean']})
-grouped_multiple_mean_bc4 = grouped_multiple_mean_bc4.reset_index()
-grouped_multiple_mean_bc4.columns =  grouped_multiple_mean_bc4.columns.droplevel(-1)
-grouped_multiple_mean_bc4.to_csv(r'bc4_processed_perpos_mean.tsv', sep='\t', index = False)
+python3 sliding_window_nanopolish_processedinput.py input -w 15
+#example input x.processed_perpos_mean.csv
 ```
 
-
-#### Modify the perpos data, so that we can use it to create sliding window
-```R
-bc1<-read.delim("bc1_processed_perpos_mean.tsv")
-bc1$readidx<- rep("1", nrow(bc1))
-bc1_2<- bc1[,c(1,2,3,5,4)]
-write.table(bc1_2, file="bc1_processed_perpos_modified.tsv", quote=FALSE, row.names=FALSE)
-
-bc2<-read.delim("bc2_processed_perpos_mean.tsv")
-bc2$readidx<- rep("1", nrow(bc2))
-bc2_2<- bc2[,c(1,2,3,5,4)]
-write.table(bc2_2, file="bc2_processed_perpos_modified.tsv", quote=FALSE, row.names=FALSE)
-
-bc3<-read.delim("bc3_processed_perpos_mean.tsv")
-bc3$readidx<- rep("1", nrow(bc3))
-bc3_2<- bc3[,c(1,2,3,5,4)]
-write.table(bc3_2, file="bc3_processed_perpos_modified.tsv", quote=FALSE, row.names=FALSE)
-
-bc4<-read.delim("bc4_processed_perpos_mean.tsv")
-bc4$readidx<- rep("1", nrow(bc4))
-bc4_2<- bc4[,c(1,2,3,5,4)]
-write.table(bc4_2, file="bc4_processed_perpos_modified.tsv", quote=FALSE, row.names=FALSE)
-
-```
-
-#### Modify the perpos data, so that we can use it to create sliding window
-
+#### Creating per-read values per 15 nt window (For Stoichometry)
+required: python3
 
 ```bash
-module load Python/3.7.2-GCCcore-8.2.0
-python /users/enovoa/hliu/SHARE/huanle_useful_snippets/src/oz_sliding_win/5.Sliding_event_aln_tabl_on_ref_with_reads_info.py -f bc1_processed_perpos_modified.tsv -w 15 > bc1_perpos_sliding15.tsv
-python /users/enovoa/hliu/SHARE/huanle_useful_snippets/src/oz_sliding_win/5.Sliding_event_aln_tabl_on_ref_with_reads_info.py -f bc2_processed_perpos_modified.tsv -w 15 > bc2_perpos_sliding15.tsv
-python /users/enovoa/hliu/SHARE/huanle_useful_snippets/src/oz_sliding_win/5.Sliding_event_aln_tabl_on_ref_with_reads_info.py -f bc3_processed_perpos_modified.tsv -w 15 > bc3_perpos_sliding15.tsv
-python /users/enovoa/hliu/SHARE/huanle_useful_snippets/src/oz_sliding_win/5.Sliding_event_aln_tabl_on_ref_with_reads_info.py -f bc4_processed_perpos_modified.tsv -w 15 > bc4_perpos_sliding15.tsv
+python -f sliding_window_nanopolish_rawinput.py input -w 15 > output
+#example input x.reads-ref.eventalign.txt
 ```
-
 
 
 ### Plotting the processed outputs
 
 #### Density plots for the single positions
-
-
 ```R
 #Libraries needed
 library(dplyr)
@@ -160,7 +80,7 @@ mod<- read.delim("pU_5mer.tsv")
 for (pos in unique(mod$Pos)) {
 	subs<- subset(all, Pos==pos)
 	pdf(file=paste(pos, "_Y_pos_all_strains.pdf", sep="."),height=4,width=9,onefile=FALSE)
-		print(ggplot(subs, aes(x= event_level_mean, fill=sample,color=sample)) +
+		print(ggplot(subs, aes(x= event_level_mean, fill=sample)) +
  		geom_density(alpha=0.3,adjust = 2)+
   		theme_bw()+
 		ggtitle(paste(pos, "Y"))+
@@ -183,7 +103,6 @@ pu_all<- na.omit(pu_all)
 pu_all_2<-pu_all[,-12]
 #Create a column that will give the base information
 pu_all_2$base<- rep("Y",nrow(pu_all_2))
-
 
 #Create a column in mod file in order to use for the join function
 mod$reference_kmer<- mod$Kmer
@@ -339,6 +258,20 @@ for (pos in unique(sn36_all$Posn.) ) {
       sn36ko_st<- join(sn36ko, status, by="pos") 
       #Rename the columns
       colnames(sn36ko_st)<- c("contig","position", "kmer", "sn36ko_event_level_mean_mean", "pos", "sample", "Chr", "Position", "ModStatus","Status", "Neighbour")
+
+      #Import the Per position table for WT
+      wt <- read.delim("bc1_processed_perpos_mean.tsv")
+      #Add 3 nt to each position since Nanopolish output is 0 based and falls behind 2 nts
+      wt$position<- wt$position+3 
+      #Create a column for unique positions
+      wt$pos<- paste(wt$contig, wt$position)
+      #Add a column replicating wt
+      wt$sample <- rep("wt",nrow(wt)) 
+      #use join function to add count number to the data
+      wt_st<- join(wt, status, by="pos") 
+      #Rename the columns
+      colnames(wt_st)<- c("contig","position", "kmer", "wt_event_level_mean_mean", "pos", "sample", "Chr", "Position", "ModStatus","Status", "Neighbour")
+
 
 
       # Use join function to merge the strains
