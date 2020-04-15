@@ -11,7 +11,7 @@
 	library(dplyr)
 	library(ggplot2)
 	library(ggbeeswarm)
-
+	library(ggpubr)
 
 #Input
 args <- commandArgs(trailingOnly = TRUE)
@@ -248,3 +248,19 @@ cond1 <- args[1] #1st variable
             		legend.text = element_text(color = "black", size=15)))
 		dev.off()
 	}
+
+
+
+	wilcox_all<- vector()
+	for (mod in unique(mod_only_stats$Status)) {
+		subset_mod <- subset(mod_only_stats, Status==mod)
+		subset_unmod<-subset(unmod_stats2, Nuc==unique(subset_mod$Nuc))
+		binded<- rbind(subset_mod,subset_unmod)
+		mbinded<- melt(binded)
+		mbinded$Base<- gsub("Unm", paste(unique(mbinded$Nuc)), mbinded$Status)
+		mbinded$Base<- gsub("T", "U", mbinded$Base)
+		mbinded$Base <- factor(mbinded$Base, levels = unique(mbinded$Base))
+		wilcox<- as.data.frame(compare_means(value ~ Base,  data = mbinded, group.by="variable",method = "wilcox.test"))
+		wilcox_all<- rbind(wilcox_all, wilcox)
+	}
+	write.table(wilcox_all, file="pvalues_wilcox.dotplot.tsv",quote=FALSE, sep="\t")

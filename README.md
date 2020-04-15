@@ -44,3 +44,16 @@ Run ID :  RNA639991, RNA563572
 [Information on the fractions can be found here](https://github.com/novoalab/yeast_rRNA_Mod/blob/master/scripts/yeast_rRNA_fractions.md)
 
 
+## TOOLS NEEDED
+
+Following R Packages are needed : 
+plyr
+stringr
+reshape2
+dplyr
+ggplot2
+ggbeeswarm
+ggpubr
+
+
+
