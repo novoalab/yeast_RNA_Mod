@@ -1,13 +1,13 @@
-# YEAST RIBOSOMAL RNA MODIFICATION ANALYSIS
-Analysis of Direct RNA Sequencing of Yeast Ribosomal RNA 
-These scripts are used for the generation of results in the study below:
+# Analysis of Direct RNA Sequencing of Yeast Ribosomal RNAs 
+
+These scripts were used for the generation of the results in the study: 
 "Decoding ribosomal RNA modifications in translating and non-translating ribosomes at single molecule resolution"
+Begik O*, Lucas MC*, Ramirez JM, Milenkovic I, Cruciani S, Vieira HGS, Medina R, Liu H, Sas-Chen A, Mattick JS, Schwartz S and Novoa EM.  bioRxiv 2020. doi: https://doi.org/10.1101/2020.07.06.189969
 
 ## WHAT IS INCLUDED:
 
 - Scripts to process Nanopolish event align output files
 - Scripts to process EpiNano output files
-
 
 ## DATASETS ANALYZED USING THESE SCRIPTS: 
 
