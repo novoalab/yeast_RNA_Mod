@@ -6,13 +6,13 @@ These scripts were used for the generation of the results in the study:
 
 Begik O*, Lucas MC*, Ramirez JM, Milenkovic I, Cruciani S, Vieira HGS, Medina R, Liu H, Sas-Chen A, Mattick JS, Schwartz S and Novoa EM.  bioRxiv 2020. doi: https://doi.org/10.1101/2020.07.06.189969
 
-## WHAT IS INCLUDED:
+## What's included:
 
 -  [Scripts](https://github.com/novoalab/yeast_RNA_Mod/tree/master/executables/Epinano) to process EpiNano output files
 -  [Scripts](https://github.com/novoalab/yeast_RNA_Mod/tree/master/executables/Nanopolish) to process Nanopolish event align output files
 
 
-## DEPENDENCIES 
+## Dependencies/requirements: 
 
 Following R Packages are needed to run the scripts: 
 |R packages|
