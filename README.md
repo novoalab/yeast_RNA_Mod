@@ -1,6 +1,6 @@
-# Analysis of Direct RNA Sequencing of Yeast Ribosomal RNAs 
+# Analysis of Direct RNA Sequencing of Yeast Total RNAs 
 
-These scripts were used for the generation of the results in the study: 
+This repository includes all the scripts used for the analysis of yeast samples in the study: 
 
 "Decoding ribosomal RNA modifications in translating and non-translating ribosomes at single molecule resolution"
 
