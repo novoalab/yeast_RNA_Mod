@@ -5,7 +5,6 @@ library(stringr)
 library(reshape2)
 #Rscript 5mer_barplot.R wt.bam.tsv.per.site.var.per_site_var.5mer.csv sn3.bam.tsv.per.site.var.per_site_var.5mer.csv
 
-
 #Input
 args <- commandArgs(trailingOnly = TRUE)
 cond1 <- args[1] #1st variable
@@ -157,8 +156,6 @@ cond2 <- args[2] #2nd variable
                     legend.text = element_text(color = "black", size=20)))
   		dev.off()
 	}
-
-
 
 
 	#For WT and Sn3KO

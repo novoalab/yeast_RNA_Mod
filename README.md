@@ -8,9 +8,9 @@ Begik O*, Lucas MC*, Ramirez JM, Milenkovic I, Cruciani S, Vieira HGS, Medina R,
 
 ## What's included:
 
--  [Scripts](https://github.com/novoalab/yeast_RNA_Mod/tree/master/executables/Epinano) to process EpiNano output files
--  [Scripts](https://github.com/novoalab/yeast_RNA_Mod/tree/master/executables/Nanopolish) to process Nanopolish event align output files
--  [Scripts](https://github.com/novoalab/yeast_RNA_Mod/tree/master/executables/NanoCMCSeq) to process NanoCMC-Seq output files
+-  [Scripts](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/Epinano) to process EpiNano output files
+-  [Scripts](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/Nanopolish) to process Nanopolish event align output files
+-  [Scripts](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/NanoCMCSeq) to process NanoCMC-Seq output files
 
 ## Dependencies/requirements: 
 
