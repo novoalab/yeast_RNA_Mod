@@ -6,11 +6,11 @@
 ## What's included:
 
 ### Tools 
--  [Epinano](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/Epinano) Base frequency version in order to analyse direct RNA sequencing bam files
--  [Bam2Stats](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/Epinano) Tool in order to analyse NanoCMC-Seq bam files]
+-  [Epinano](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/Epinano) base frequency version in order to analyse direct RNA sequencing bam files
+-  [Bam2Stats](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/Epinano) tool in order to analyse NanoCMC-Seq bam files]
 
 ### Bash scripts 
--  [Pre-process files for R analysis](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/Epinano)
+-  [Pre-process the files for R analysis](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/Epinano)
 
 ### R scripts
 -  [Process ribosomal RNA runs](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/Nanopolish)
