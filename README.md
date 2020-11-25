@@ -5,11 +5,15 @@
 
 ## What's included:
 
--  [Epinano base frequency version in order to analyse bam files](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/Epinano)
--  [R scripts to process ribosomal RNA runs](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/Nanopolish)
--  [R scripts to process sn/snoRNA runs](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/NanoCMCSeq)
--  [R scripts to process mRNA runs](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/Mpileup)
--  [Scripts to process NanoCMC-Seq runs](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/Mpileup)
+### Tools 
+-  [Epinano base frequency version in order to analyse direct RNA sequencing bam files](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/Epinano)
+-  [Bam2Stats tool in order to analyse NanoCMC-Seq bam files](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/Epinano)
+
+### R scripts
+-  [Process ribosomal RNA runs](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/Nanopolish)
+-  [Process sn/snoRNA runs](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/NanoCMCSeq)
+-  [Process mRNA runs](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/Mpileup)
+-  [Process NanoCMC-Seq runs](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/Mpileup)
 
 
 ## Dependencies/requirements: 
