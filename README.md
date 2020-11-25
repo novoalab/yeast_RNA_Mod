@@ -1,10 +1,7 @@
-# Analysis of Direct RNA Sequencing of Yeast Total RNAs 
-
-This repository includes all the scripts used for the analysis of yeast samples in the study: 
-
-"Decoding ribosomal RNA modifications in translating and non-translating ribosomes at single molecule resolution"
-
-Begik O*, Lucas MC*, Ramirez JM, Milenkovic I, Cruciani S, Vieira HGS, Medina R, Liu H, Sas-Chen A, Mattick JS, Schwartz S and Novoa EM.  bioRxiv 2020. doi: https://doi.org/10.1101/2020.07.06.189969
+# Analysis of Direct RNA Sequencing data for :
+-  Saccharomyces Cerevisiae Ribosomal RNAs
+-  Saccharomyces Cerevisiae sn/sno RNAs
+-  Saccharomyces Cerevisiae mRNAs
 
 ## What's included:
 
