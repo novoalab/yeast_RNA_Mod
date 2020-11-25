@@ -5,10 +5,12 @@
 
 ## What's included:
 
--  [Scripts](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/Epinano) to process EpiNano output files
--  [Scripts](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/Nanopolish) to process Nanopolish event align output files
--  [Scripts](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/NanoCMCSeq) to process NanoCMC-Seq output files
--  [Scripts](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/Mpileup) to process Mpileup output files
+-  [Epinano base frequency version in order to analyse bam files](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/Epinano)
+-  [R scripts to process ribosomal RNA runs](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/Nanopolish)
+-  [R scripts to process sn/snoRNA runs](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/NanoCMCSeq)
+-  [R scripts to process mRNA runs](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/Mpileup)
+-  [Scripts to process NanoCMC-Seq runs](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/Mpileup)
+
 
 ## Dependencies/requirements: 
 Following R Packages are needed to run the scripts: 
