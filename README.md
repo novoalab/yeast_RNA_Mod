@@ -1,7 +1,10 @@
+
 # Analysis of Direct RNA Sequencing data for :
 -  Saccharomyces Cerevisiae Ribosomal RNAs
 -  Saccharomyces Cerevisiae sn/sno RNAs
 -  Saccharomyces Cerevisiae mRNAs
+
+![alt text](./images/readme_image.png "init_fig")
 
 ## What's included:
 
