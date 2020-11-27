@@ -27,5 +27,5 @@ Example using test data:
 Rscript mods_ternary.R test_data/wt_epinano.csv all_rrna_mod_status.tsv
 ```
 
-![alt text](../../images/rrna/ternary_example.png "ternary_example")
+![alt text](../../images/rrna/ternary_example.png "ternary _example"=100x100 )
 
