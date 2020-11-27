@@ -38,4 +38,4 @@ Example using test data:
 Rscript dotplot_5mer wt.bam.tsv.per.site.var.per_site_var.5mer.csv rrna_mod_5mer.tsv
 ```
 
-<img src="../../images/rrna/5mer_dotplot_example.png " width="400"> 
+<img src="../../images/rrna/5mer_dotplot_example.png " width="1000"> 
