@@ -103,7 +103,7 @@ yeast_mod$Nuc<- substring(yeast_mod$X.Kmer, 3,3)
 			print(ggplot(mbinded, aes(x=Base, y=value)) + 
 				geom_quasirandom(varwidth = TRUE, aes(color=Base))+
 				scale_color_manual(values=c("#ffa41b", "#79bac1"))+
-				geom_boxplot(aes(alpha=0), outlier.size=NA)+
+				geom_boxplot(aes(alpha=0), outlier.shape=NA)+
 				stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median,
             		geom = "crossbar", width = 0.7, color="#c06c84")+
 				facet_wrap(~variable,scales = "free", nrow=1)+
@@ -172,7 +172,7 @@ yeast_mod$Nuc<- substring(yeast_mod$X.Kmer, 3,3)
 			print(ggplot(mbinded, aes(x=Base, y=value)) + 
 				geom_quasirandom(varwidth = TRUE, aes(color=Base))+
 				scale_color_manual(values=c("#ffa41b", "#79bac1"))+
-				geom_boxplot(aes(alpha=0), outlier.size=NA)+
+				geom_boxplot(aes(alpha=0), outlier.shape=NA)+
 				stat_summary(fun.y = median, fun.ymin = median, fun.ymax = median,
             		geom = "crossbar", width = 0.7, color="#c06c84")+
 				facet_wrap(~variable,scales = "free", nrow=1)+
