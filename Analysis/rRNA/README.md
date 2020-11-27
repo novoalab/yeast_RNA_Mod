@@ -13,9 +13,7 @@ Example using test data:
 ```
 Rscript mods_dotplot.R test_data/wt_epinano_5mer.csv all_rrna_mod_status.tsv
 ```
-
-![alt text](../../images/rrna/dotplot_example.png "dotplot_example")
-
+<img src="../../images/rrna/dotplot_example.png " width="600">
 
 ### Ternary plots (base-frequency) of each distinct type of modification (Figure 2C)
 ```
@@ -27,4 +25,4 @@ Example using test data:
 Rscript mods_ternary.R test_data/wt_epinano.csv all_rrna_mod_status.tsv
 ```
 
-<img src="../../images/rrna/ternary_example.png " width="400">
+<img src="../../images/rrna/ternary_example.png " width="400"> 
