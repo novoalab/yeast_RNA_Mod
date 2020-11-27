@@ -52,5 +52,5 @@ Features can be mis (mismatch), del (deletion), ins (insertion)
 Rscript epinano_scatterplot.R test_data/wt_epinano.csv wt test_data/sn3ko_epinano.csv sn3KO mis
 ```
 
-<img src="../../images/rrna/scatter_example.png " width="500"> 
+<img src="../../images/rrna/scatter_example.png " width="300"> 
 
