@@ -1,6 +1,6 @@
 # Analysis of Ribosomal RNA sequences
 
-![alt text](../images/rrna/rrna_igv_image.png "rrna_igv")
+![alt text](../../images/rrna/rrna_igv_image.png "rrna_igv")
 
 
 
