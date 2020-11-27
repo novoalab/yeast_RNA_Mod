@@ -41,6 +41,7 @@ Rscript dotplot_5mer.R test_data/wt_epinano.csv rrna_mod_5mer.tsv
 <img src="../../images/rrna/5mer_dotplot_example.png " width="1000"> 
 
 
+## 2.Comparisons between two datasets
 
 ### Scatter plots between two conditions (Figure 3B-D)
 ```
@@ -53,4 +54,20 @@ Rscript epinano_scatterplot.R test_data/wt_epinano.csv wt test_data/sn3ko_epinan
 ```
 
 <img src="../../images/rrna/scatter_example.png " width="300"> 
+
+
+### Bar plots between two conditions
+```
+#Rscript epinano_barplot.R input1 label1 input2 label2 feature
+```
+Example using test data:
+Features can be mis (mismatch), del (deletion), ins (insertion)
+```
+Rscript epinano_barplot.R test_data/wt_epinano.csv wt test_data/sn3ko_epinano.csv sn3KO mis
+```
+
+<img src="../../images/rrna/barplot_delta_example.png " width="700"> 
+
+
+
 
