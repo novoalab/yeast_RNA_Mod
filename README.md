@@ -16,7 +16,7 @@
 -  [Pre-process the files for R analysis](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/Epinano)
 
 ### R scripts
--  [Process ribosomal RNA runs](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/Nanopolish)
+-  [Process ribosomal RNA runs](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/rRNA)
 -  [Process sn/snoRNA runs](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/NanoCMCSeq)
 -  [Process mRNA runs](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/Mpileup)
 -  [Process NanoCMC-Seq runs](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/Mpileup)

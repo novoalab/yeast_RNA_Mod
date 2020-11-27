@@ -53,7 +53,7 @@ for (chr in unique(data$Chr)) {
 	subs <- subset(data,  Chr==chr)
 	res<- rlm(subs[,c(paste(label1, "value", sep="_"))] ~ subs[,c(paste(label2, "value", sep="_"))]) #linear model  
 	res_vec <- res$residuals#this contains residuals 
-	threshold <-  5 * sd(res_vec) #The threshold
+	threshold <-  10 * sd(res_vec) #The threshold
 	subs$score<- abs(subs[,c(paste(label1, "value", sep="_"))] - subs[,c(paste(label2, "value", sep="_"))])
 	pdf(file=paste(chr,feature, label1, label2, "scatter.pdf", sep="_"),height=5,width=5,onefile=FALSE)
 		print(ggplot(subs, aes_string(x=paste(label1, "value", sep="_"), y=paste(label2, "value", sep="_"))) +
