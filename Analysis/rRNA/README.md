@@ -35,7 +35,7 @@ Rscript dotplot_5mer.R <epinano_5mer.csv> rrna_mod_5mer.tsv
 Example using test data:
 
 ```
-Rscript dotplot_5mer.R test_data/wt_epinano.csv rrna_mod_5mer.tsv
+Rscript dotplot_5mer.R test_data/wt_epinano_5mer.csv rrna_mod_5mer.tsv
 ```
 
 <img src="../../images/rrna/5mer_dotplot_example.png " width="1000"> 
