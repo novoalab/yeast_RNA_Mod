@@ -4,6 +4,10 @@
 -  Saccharomyces Cerevisiae sn/sno RNAs
 -  Saccharomyces Cerevisiae mRNAs
 
+Files related to yeast RNA analysis can be found [here](https://public-docs.crg.es/enovoa/public/begik_lucas_2021_NatBiotech_Yeast/) 
+
+
+
 ![alt text](./images/readme_image.png "init_fig")
 
 ## What's included:
