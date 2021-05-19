@@ -5,40 +5,40 @@
   # So we will plot ALL positions and only Unaffected positions
   #Rscript dotplot.R wt.bam.tsv.per.site.var.per_site_var.5mer.csv all_rrna_mod_status.tsv
   #Libraries needed
-	library(plyr)
-	library(stringr)
-	library(reshape2)
-	library(dplyr)
-	library(ggplot2)
-	library(ggbeeswarm)
-	library(ggpubr)
+library(plyr)
+library(stringr)
+library(reshape2)
+library(dplyr)
+library(ggplot2)
+library(ggbeeswarm)
+library(ggpubr)
 
 #Input
-args <- commandArgs(trailingOnly = TRUE)
+#args <- commandArgs(trailingOnly = TRUE)
 input <- args[1] #1st variable
 status_input <- args[2]
 
 #Importing the files
-	#Status File
-	status<-read.delim(status_input)
-		#Add a column for unique positions
-		status$chr_pos<- paste(status$Chr, status$Position)
-	#Input Epinano file
-	yeast<-read.delim(input, sep=",")
-		#Create a vector for positions
-		Ref_Pos<- str_split_fixed(yeast$Window, ":", 5) 
-		#Create a vector for coverage
-		Coverage<- str_split_fixed(yeast$Coverage, ":", 5)
-		#Add it to the table
-		yeast$CoverageX<- as.numeric(Coverage[,3])
-		#Add it to the table
-		yeast$Ref_Pos<- Ref_Pos[,3] 
-		#Create a new column with two columns pasted
-		yeast$chr_pos<-paste(yeast$Ref,yeast$Ref_Pos) 
-		#Select the positions that has coverage higher than 30
-		yeast<- subset(yeast, CoverageX>50)
-		#Remove the CoverageX column
-		yeast$CoverageX<- NULL
+#Status File
+status<-read.delim(status_input)
+#Add a column for unique positions
+status$chr_pos<- paste(status$Chr, status$Position)
+#Input Epinano file
+yeast<-read.delim(input, sep=",")
+#Create a vector for positions
+Ref_Pos<- str_split_fixed(yeast$Window, ":", 5) 
+#Create a vector for coverage
+Coverage<- str_split_fixed(yeast$Coverage, ":", 5)
+#Add it to the table
+yeast$CoverageX<- as.numeric(Coverage[,3])
+#Add it to the table
+yeast$Ref_Pos<- Ref_Pos[,3] 
+#Create a new column with two columns pasted
+yeast$chr_pos<-paste(yeast$Ref,yeast$Ref_Pos) 
+#Select the positions that has coverage higher than 30
+yeast<- subset(yeast, CoverageX>50)
+#Remove the CoverageX column
+yeast$CoverageX<- NULL
 
 #Merge status file with processed input
 yeast_mod<- join(yeast,status, by="chr_pos")
