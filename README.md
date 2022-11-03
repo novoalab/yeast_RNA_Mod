@@ -4,7 +4,7 @@
 -  Saccharomyces Cerevisiae sn/sno RNAs
 -  Saccharomyces Cerevisiae mRNAs
 
-Files related to yeast RNA analysis can be found [here](https://public-docs.crg.es/enovoa/public/begik_lucas_2021_NatBiotech_Yeast/) 
+Raw files related to yeast RNA analysis can be found [here](https://www.ebi.ac.uk/ena/browser/view/PRJEB37798) (total RNA) and [here](https://www.ebi.ac.uk/ena/browser/view/PRJEB41495) (polyA-selected RNA)
 
 
 
