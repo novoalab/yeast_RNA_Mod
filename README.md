@@ -4,11 +4,16 @@
 -  Saccharomyces Cerevisiae sn/sno RNAs
 -  Saccharomyces Cerevisiae mRNAs
 
-Raw files related to yeast RNA analysis can be found [here](https://www.ebi.ac.uk/ena/browser/view/PRJEB37798) (total RNA) and [here](https://www.ebi.ac.uk/ena/browser/view/PRJEB41495) (polyA-selected RNA)
-
-
 
 ![alt text](./images/readme_image.png "init_fig")
+
+
+To reproduce the full results, you will need the FAST5 and FASTQ files related to yeast RNA analyses can be found [here](https://www.ebi.ac.uk/ena/browser/view/PRJEB37798) (total RNA) and [here](https://www.ebi.ac.uk/ena/browser/view/PRJEB41495) (polyA-selected RNA)
+
+Demo/test data to run the scripts is included in each of the Analysis sections:
+- [Test data](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/NanoCMCSeq/test_data) for NanoCMC-seq 
+- [Test data](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/ncRNA/test_data) for ncRNA analyses
+- [Test data](https://github.com/novoalab/yeast_RNA_Mod/tree/master/Analysis/rRNA) for rRNA analyses
 
 ## What's included:
 
