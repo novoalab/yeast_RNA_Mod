@@ -33,7 +33,7 @@ Demo/test data to run the scripts is included in each of the Analysis sections:
 
 ## Stoichiometry prediction 
 - If you'd like to predict stochiometry (difference in RNA modification levels) between two samples (e.g. wild type vs knockout, normal vs heat stress), you may wish to look at the [NanoRMS](https://github.com/novoalab/nanoRMS/blob/master/README.md) GitHub repository. 
-- 
+
 
 ## Dependencies/requirements: 
 Following R Packages are needed to run the scripts: 
