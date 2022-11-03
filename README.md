@@ -1,8 +1,8 @@
 
 # Analysis of Direct RNA Sequencing data for :
--  Saccharomyces Cerevisiae Ribosomal RNAs
--  Saccharomyces Cerevisiae sn/sno RNAs
--  Saccharomyces Cerevisiae mRNAs
+-  Saccharomyces cerevisiae ribosomal RNAs (rRNAs)
+-  Saccharomyces cerevisiae small nuclear (snRNAs) and small nucleolar RNAs (snoRNAs)
+-  Saccharomyces cerevisiae messenger RNAs (mRNAs)
 
 
 ![alt text](./images/readme_image.png "init_fig")
